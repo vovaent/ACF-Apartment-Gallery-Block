@@ -1,0 +1,52 @@
+@import '../variables';
+
+.ag-benefit {
+	padding: 24px 24px 42px;
+	border-radius: 8px;
+	background: #fff;
+	box-shadow: 0px 4px 20px 0px rgba( 0, 0, 0, 0.1 );
+	cursor: pointer;
+
+	&__picture {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		max-width: 100%;
+		max-height: 192px;
+		overflow: hidden;
+	}
+
+	&__bottom {
+		display: flex;
+		align-items: center;
+		margin-top: 20px;
+	}
+
+	&__text {
+		width: 100%;
+	}
+
+	&__title {
+		margin: 0;
+		color: $primary;
+		font-family: $primary-bold;
+		font-size: 18px;
+		line-height: 140%; /* 25.2px */
+	}
+
+	&__description {
+		margin-top: 8px;
+		max-width: 269px;
+		color: $primary;
+		font-family: $primary-regular;
+		font-size: 15px;
+		line-height: 140%; /* 21 */
+	}
+
+	&__icon {
+		width: 58px;
+		height: 58px;
+		flex: 1 0 auto;
+	}
+}

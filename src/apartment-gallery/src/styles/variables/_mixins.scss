@@ -1,0 +1,53 @@
+@mixin media-down( $width ) {
+	@media ( max-width: $width ) {
+		@content;
+	}
+}
+
+@mixin media-down-md() {
+	@media ( max-width: map-get($down, 'md') ) {
+		@content;
+	}
+}
+
+@mixin media-down-sm() {
+	@media ( max-width: map-get($down, 'sm') ) {
+		@content;
+	}
+}
+
+@mixin media-up( $width ) {
+	@media ( min-width: $width ) {
+		@content;
+	}
+}
+
+@mixin media-up-sm() {
+	@media ( min-width: map-get($up, 'sm') ) {
+		@content;
+	}
+}
+
+@mixin media-up-md() {
+	@media ( min-width: map-get($up, 'md') ) {
+		@content;
+	}
+}
+
+@mixin reset-ul() {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+
+	// li {
+	// 	position: static;
+
+	// 	&:not( :first-child ) {
+	// 		margin-top: 0;
+	// 	}
+
+	// 	&::before {
+	// 		display: none;
+	// 	}
+	// }
+}

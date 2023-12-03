@@ -1,0 +1,26 @@
+{
+    "name": "apartment-gallery-block",
+    "version": "0.1.0",
+    "description": "Apartment Gallery block scaffolded with Create Block tool.",
+    "author": "The WordPress Contributors",
+    "license": "GPL-2.0-or-later",
+    "main": "build/apartment-gallery.js",
+    "scripts": {
+        "build": "wp-scripts build --webpack-copy-php",
+        "format": "wp-scripts format",
+        "lint:css": "wp-scripts lint-style",
+        "lint:js": "wp-scripts lint-js",
+        "packages-update": "wp-scripts packages-update",
+        "plugin-zip": "wp-scripts plugin-zip",
+        "start": "wp-scripts start --webpack-copy-php",
+        "bundle": "dir-archiver --src . --dest ../../apartment-gallery-block.zip --exclude src .prettierignore .prettierrc.js .stylelintignore .browserlistrs .editorconfig .eslintignore .eslintrc.js .DS_Store .stylelintrc.json .eslintrc .git .gitattributes .github .gitignore README.md composer.json composer.lock node_modules vendor package-lock.json package.json .travis.yml phpcs.xml.dist sass style.css.map yarn.lock"
+    },
+    "devDependencies": {
+        "@wordpress/scripts": "^26.15.0",
+        "dir-archiver": "^2.1.0"
+    },
+    "dependencies": {
+        "body-scroll-lock": "^4.0.0-beta.0",
+        "swiper": "^10.3.1"
+    }
+}

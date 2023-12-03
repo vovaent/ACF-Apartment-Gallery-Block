@@ -1,0 +1,160 @@
+@import '../variables';
+
+.ag-modal {
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	background: #000000b3;
+	pointer-events: auto;
+	visibility: visible;
+	overflow: auto;
+
+	&--hidden {
+		visibility: hidden;
+		height: 0;
+		width: 0;
+		pointer-events: none;
+		overflow: hidden;
+	}
+
+	&__content {
+		position: absolute;
+		top: 77px;
+		left: 50%;
+		transform: translateX( -50% );
+		display: flex;
+		max-width: 1339px;
+		width: 100%;
+		max-height: 746px;
+		height: 100%;
+		padding: 40px;
+		border-radius: 5px;
+		background: #fff;
+		overflow: auto;
+	}
+
+	&__cross {
+		position: absolute;
+		top: 15px;
+		right: 24px;
+		width: 16px;
+		height: 16px;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 0;
+			width: 22px;
+			height: 0;
+			border: 1px solid #000000;
+			transform: translateY( -50% ) rotate( 45deg );
+			transform-origin: center;
+		}
+
+		&:after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 0;
+			width: 22px;
+			height: 0;
+			border: 1px solid #000000;
+			transform: translateY( -50% ) rotate( -45deg );
+			transform-origin: center;
+		}
+	}
+
+	&__gallery {
+		flex-shrink: 0;
+		margin: 0;
+		width: 712px;
+		overflow-x: hidden;
+	}
+
+	&__slider {
+		height: 492px;
+	}
+
+	&__thumbs {
+		margin-top: 20px;
+	}
+
+	&__thumb {
+		border-radius: 4px;
+		background: #c4c4c4;
+		box-sizing: border-box;
+		overflow: hidden;
+
+		&.swiper-slide {
+			height: 151px;
+		}
+
+		&.swiper-slide-thumb-active {
+			border: 3px solid #f86d2e;
+		}
+	}
+
+	&__text {
+		margin-top: 50px;
+		margin-left: 41px;
+		max-width: 452px;
+	}
+
+	&__title {
+		margin: 0;
+		color: $primary;
+		font-family: $primary-bold;
+		font-size: 45px;
+		line-height: 122%; /* 54.9px */
+		b,
+		strong {
+			color: $secondary;
+		}
+	}
+
+	&__subtitle {
+		margin-top: 23px;
+		color: $primary;
+		font-family: $primary-bold;
+		font-size: 18px;
+		line-height: 140%; /* 25.2px */
+	}
+
+	&__description {
+		margin-top: 38px;
+		max-width: 335px;
+
+		ul {
+			@include reset-ul;
+
+			li {
+				position: relative;
+				padding-left: 24px;
+				color: $primary;
+				font-family: $primary-regular;
+				font-size: 15px;
+				line-height: 140%; /* 21px */
+				opacity: 0.8;
+
+				&:not( :first-child ) {
+					margin-top: 23px;
+				}
+
+				&::before {
+					content: '';
+					position: absolute;
+					top: 0;
+					left: 0;
+					display: inline-block;
+					margin-top: 4px;
+					width: 10px;
+					height: 10px;
+					background-color: $secondary;
+				}
+			}
+		}
+	}
+}

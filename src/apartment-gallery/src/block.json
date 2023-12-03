@@ -1,0 +1,18 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "acf/apartment-gallery",
+    "version": "0.1.0",
+    "title": "Acf Apartment Gallery Block",
+    "category": "acf-blocks",
+    "icon": "format-gallery",
+    "description": "Block Apartment Gallery",
+    "example": {},
+    "supports": {},
+    "script": "file:./apartment-gallery.js",
+    "style": "file:./apartment-gallery.css",
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "apartment-gallery.php"
+    }
+}

@@ -1,0 +1,45 @@
+@use './variables';
+@use './fonts';
+@use './components';
+
+.wp-block-acf-apartment-gallery {
+	width: 100%;
+
+	img {
+		width: 100%;
+		max-width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	&__benefits {
+		position: relative;
+		display: grid;
+		grid-template-columns: repeat( 3, 1fr );
+		gap: 30px;
+		width: 100%;
+		max-width: 1240px;
+		padding: 108px 0 98px;
+		background-color: #fff;
+	}
+
+	&__decor {
+		position: absolute;
+		z-index: -1;
+
+		&--one {
+			top: 84.41px;
+			left: -118px;
+		}
+
+		&--two {
+			top: 525.87px;
+			left: -93px;
+		}
+
+		&--three {
+			top: 138.3px;
+			right: -100px;
+		}
+	}
+}
